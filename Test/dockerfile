@@ -1,0 +1,59 @@
+FROM ubuntu:18.04
+USER root
+
+MAINTAINER Heiko Thierbach <heiko.thierbach@tt51.de>
+
+LABEL version="0.1"
+RUN apt-get -y update
+RUN apt-get -y install python3.8 python3-pip 
+RUN apt-get -y install libdmtx0a
+RUN apt-get -y install python-zbar 
+RUN apt-get -y install python-qrtools
+RUN apt-get -y install libzbar-dev
+RUN apt-get -y install python3-dev
+RUN apt-get -y install python2.7 
+RUN apt-get -y install wget
+RUN apt-get -y install apt-utils
+RUN apt-get -y install locales
+# RUN wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
+# RUN python2 get-pip.py
+
+
+RUN python3 -m pip install --upgrade pip
+RUN pip3 install python3-utils
+RUN pip3 install minio
+RUN pip3 install confluent-kafka
+RUN pip3 install pikepdf
+RUN pip3 install python-magic
+RUN pip3 install textract
+RUN pip3 install pdf2image
+RUN pip3 install pylibdmtx
+RUN pip3 install pyzbar
+RUN pip3 install libzbar-cffi==0.2.1
+RUN pip3 install opencv-python
+# RUN ! pip install opencv-python
+RUN pip3 install pdf2text
+RUN ! python -m pip install open-cv2
+RUN ! python -m pip install cv2
+# RUN pip3 install zbar
+
+RUN sed -i '/de_DE.UTF-8/s/^# //g' /etc/locale.gen && locale-gen
+ENV LANG de_DE.UTF-8  
+ENV LANGUAGE de_DE:de  
+ENV LC_ALL de_DE.UTF-8 
+
+ENV TZ="Europe/Berlin"
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+WORKDIR /tmp
+
+COPY *.py /tmp/
+COPY Testfiles/* /tmp/Testfiles/
+
+# CMD cd /tmp
+CMD python3 Kafka_Consumer.py
+
+
+
+
+

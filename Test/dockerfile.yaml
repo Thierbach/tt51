@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keep-pruefung
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      bb: keep-pruefung
+  template:
+    metadata:
+      labels:
+        bb: keep-pruefung
+    spec:    
+      containers:
+      - name: keep-pruefung
+        image: tt51/pruefung.docker:latest
+        envFrom:
+        - secretRef:
+             name: s3appkey

@@ -1,0 +1,21 @@
+{
+  "Version":"0.1",
+  "Eigentuemer":"123N45678",
+  "AuftragsId":"a6804ca7-9d5c-4b99-9cc4-1c2fa8395546",
+  "Zeitstempel":"01.04.2021T12:33:12.00+0.00",
+  "Rechtskreis":"SGB-III",
+  "Kontext":"Antrag",
+  "Mandant":"BEREBO",
+  "DokumentName":"Antrag auf Berufseinstiegsbegleitung",
+  "DokumentId":"neu0040-A2-b.pdf",
+  "DokumentGroesse":334123,
+  "QuellBucket":"BEREBO-out",
+  "ZielBucket":"BEREBO-in",
+  "ObjectStoreURL":"https://objectstore.arbeitsagentur.de/SGB-III/Leistung",
+  "OCR":false,
+  "OCRParameter":"",
+  "KonfigParameter":"",
+  "Transformation":false,
+  "Schema":"",
+  "FraudDetection":false
+}
