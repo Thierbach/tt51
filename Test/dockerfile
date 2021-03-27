@@ -36,6 +36,7 @@ RUN pip3 install pdf2text
 RUN ! python -m pip install open-cv2
 RUN ! python -m pip install cv2
 # RUN pip3 install zbar
+RUN pip3 install PyPDF2
 
 RUN sed -i '/de_DE.UTF-8/s/^# //g' /etc/locale.gen && locale-gen
 ENV LANG de_DE.UTF-8  

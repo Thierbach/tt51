@@ -1,7 +1,6 @@
 import textract
 from pikepdf import Pdf
 import logging
-import sys
 logging.basicConfig(format='%(asctime)s %(message)s')
 
 
@@ -29,13 +28,13 @@ def checkPDFSeachability(fileName):
 def getPDFMetaData(fileName):
     logging.warning ("getPDFMetaData with " + fileName + " invoked")
 
-    try:
-        with Pdf.open(fileName) as pdf:
+    #try:
+    with Pdf.open(fileName) as pdf:
             xmp = pdf.Root.Metadata.read_bytes()    # xmp-Konten wird gelesen
             type(xmp)                               
             return (xmp.decode("utf-8"))            # xmp-Daten werden als XML Fragment zurückgegeben
-    except:
-        return ("No xmp:MetaData found")
+    #except:
+    #    return ("No xmp:MetaData found")
     
 
 # Diese Funktion liest die Roh-Daten aus einem durchsuchbaren PDF Dokument aus.
@@ -63,6 +62,7 @@ for fileName in files:
     response = checkPDFSeachability(fileName)
     print (fileName + " ist durchsuchbar " + response)
     
+    # fileName = 'Testfiles/KUG.pdf'    
     response = getPDFMetaData(fileName)
     print (fileName + "-----------------------------------------------------")
     print (response)
@@ -70,5 +70,5 @@ for fileName in files:
     response = getPDFContent(fileName)
     print (fileName + "-----------------------------------------------------")
     print (response)
-"""
+    """
     
