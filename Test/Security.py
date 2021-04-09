@@ -22,8 +22,7 @@ def documentEscaper(fileName):
 
     # DateiInhalt lesen
     suspiciousData = (suspiciousFile.read())
-    
-    
+       
     # zulässige Zeichen sind [a-Z0-9äÄüÜöÖß.-,!"`''@], alle anderen werden escaped
     escapedData =  (re.sub(r'([\;\\\+\*\?\[\^\]\$\&\{\}\[\]\!\<\>\\^\°\=\#\(\)\:\§\"\|])', r'\\\1', suspiciousData))
     logging.warning(escapedData)
@@ -37,6 +36,8 @@ def documentEscaper(fileName):
     escapedFile.close()
     
     return()
+    
+    
     
 def documentVirusScan(fileName):
     prefix = '/Testfiles/'
@@ -77,6 +78,8 @@ def documentVirusScan(fileName):
     
     
     
-print(documentEscaper('EICAR.txt'))
+# print(documentEscaper('EICAR.txt'))
 
-print(documentVirusScan('escapedEICAR.txt'))
+print(documentVirusScan('EICAR.txt'))
+# print(documentVirusScan('escapedEICAR.txt'))
+
