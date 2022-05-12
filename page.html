@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Testseite f&uuml;r conversational Form</title>
+<style>
+	#cf-context { 
+	  <input type="text" label="lname" cf-label="fname" cf-questions="... und jetzt Deinen Nachnamen, bitte!">Last name:</input><br>
+	width: 100vw;
+		height: 100vh; 
+	}
+	#form {
+		height: 0px;
+	}
+	cf-chat-response.robot thumb {
+    background-image: url('https://avatars0.githubusercontent.com/u/620738?s=88&v=4') !important;
+    }
+    # cf-chat-response.user thumb {
+    # background-image: url('file:///home/hthierbach/convForm/bot.png') !important;
+    # height: 100px;
+    # width: 100px;
+    # }
+    
+</style>
+<script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@1.0.1/dist/conversational-form.min.js" crossorigin>
+</script>
+<script language="javascript" type="text/javascript" src="cf-context1.js"></script>
+</head>
+<body>
+<!---center><img src="bot.png" width="10%"/></center--->
+</div>
+ <form id="form" cf-form></br></br>
+  <input type="text" label="fname" cf-label="fname" cf-questions="Ich bin Dein digitaler Ausf&uuml;llassistent und helfe Dir bei der Antragstellung. </br>Beantworte einfach meine Fragen und ich bereite alles weitere f&uuml;r Dich vor. </br>Und keine Angst, Du kannst alle Eingaben jederzeit noch korrigieren oder erg&auml;nzen!</br></br>O.k.? Dann lass uns anfangen ... </br></br>Nenne mir bitte Deinen <b>Vornamen</b> ...">First name:</input><br>
+  <input type="text" label="lname" cf-label="fname" cf-questions="... und jetzt Deinen <b>Nachnamen</b>, bitte!">Last name:</input><br>
+  <input type="text" label="sname" cf-label="fname" cf-questions="Sage mir bitte noch wo Du wohnst. Fangen wir mit Deiner <b>Strasse</b> an ...">Last name:</input><br>
+  <input type="text" label="hname" cf-label="fname" cf-questions="Welche <b>Hausnummer</b> darf ich mir merken?">Last name:</input><br>
+  <input type="text" label="pname" cf-label="fname" cf-questions="Jetzt noch die <b>Postleitzahl</b> ...">Last name:</input><br>
+  <input type="text" label="cname" cf-label="fname" cf-questions="... und den <b>Ort</b>, bitte!">Last name:</input><br>
+  <input type="text" label="tname" cf-label="fname" cf-questions="Unter welcher <b>Rufnummer</b> können wir Dich erreichen?">Last name:</input><br>
+  <input type="text" label="kname" cf-label="fname" cf-questions="Fast geschafft, ich brauche nur noch Deine <b>Kundennummer</b>!</br><i>Du findest diese auf unserem letzten Schreiben rechts oben.</i>">Last name:</input><br>
+  </form> 
+<div id="cf-context" role="cf-context" cf-context></div>
+</body>
+</html>
