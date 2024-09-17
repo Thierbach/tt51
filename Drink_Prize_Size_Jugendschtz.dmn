@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_05agrtz" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.4.0" camunda:diagramRelationId="d046fea8-b76c-4b38-9659-73bf15c112d2" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.5.0">
+  <decision id="Decision_154xewf" name="Drink Selector">
+    <informationRequirement id="InformationRequirement_0pd1wgw">
+      <requiredInput href="#InputData_1c176q0" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0a2y6ky">
+      <requiredInput href="#InputData_07n9b59" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0bv1wkp">
+      <input id="Input_1" label="Drink">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>Drink</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_05wpr20" label="Size">
+        <inputExpression id="LiteralExpression_1xevtlc" typeRef="string">
+          <text>Size</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Prize" name="Prize" typeRef="string" />
+      <output id="OutputClause_0umh2c3" label="Jugendschutz" name="FSK" typeRef="boolean" />
+      <rule id="DecisionRule_1a480ob">
+        <inputEntry id="UnaryTests_1ggpzg1">
+          <text>"Kaffee"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18uzjdm">
+          <text>"normal"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1n7lzq1">
+          <text>"2,50"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ner55a">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0o37hgp">
+        <inputEntry id="UnaryTests_0jolelc">
+          <text>"Kaffee"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t940eg">
+          <text>"groß"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1oh0ujo">
+          <text>"3,10"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yh0f8t">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01o9hmk">
+        <inputEntry id="UnaryTests_0wmzf4b">
+          <text>"Wasser"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0y7j73i">
+          <text>"normal"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wwp799">
+          <text>"1,80"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pf37ug">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0g8tq4d">
+        <inputEntry id="UnaryTests_13hz87s">
+          <text>"Wasser"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0z007pc">
+          <text>"groß"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1e7qd6y">
+          <text>"2,50"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16fw6xn">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1upqskc">
+        <inputEntry id="UnaryTests_16yudxo">
+          <text>"Kakao"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_096skna">
+          <text>"normal"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04rm09g">
+          <text>"2,30"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_122fwc7">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1lehp4e">
+        <inputEntry id="UnaryTests_07rbkyu">
+          <text>"Kakao"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oex796">
+          <text>"groß"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qr51k0">
+          <text>"2,90"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gpoi51">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xa18be">
+        <inputEntry id="UnaryTests_1io32s1">
+          <text>"Limonade"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0excbhk">
+          <text>"normal"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1uas87c">
+          <text>"2,80"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0chh7eb">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ix9ba5">
+        <inputEntry id="UnaryTests_1bils9d">
+          <text>"Limonade"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_081ih4j">
+          <text>"groß"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09mgdwt">
+          <text>"3,20"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fvdyeh">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ixyhcz">
+        <inputEntry id="UnaryTests_1ffy4bu">
+          <text>"Bier"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02d9e57">
+          <text>"normal"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0z8u8a2">
+          <text>"4,50"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1beg497">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0l1h7jh">
+        <inputEntry id="UnaryTests_1engthz">
+          <text>"Bier"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vvf6ef">
+          <text>"groß"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0z59q5h">
+          <text>"6,50"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0iirv20">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_179i3cy">
+        <inputEntry id="UnaryTests_1y7v64t">
+          <text>""</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ej8q50">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0c1817u">
+          <text>"0,00"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1o14qbs">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_1c176q0" name="Drink" />
+  <inputData id="InputData_07n9b59" name="Size" />
+  <inputData id="InputData_0wj4xor" name="Age" />
+  <decision id="Decision_1c55925" name="Age Check">
+    <informationRequirement id="InformationRequirement_010ugil">
+      <requiredDecision href="#Decision_154xewf" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_11qrwc2">
+      <requiredInput href="#InputData_0wj4xor" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_13765z0">
+      <input id="InputClause_1rr29mw" label="Age" biodi:width="191">
+        <inputExpression id="LiteralExpression_1cv2dpw" typeRef="integer">
+          <text>Age</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0q741r2" label="Jugendschutz" biodi:width="192">
+        <inputExpression id="LiteralExpression_0fxagk9" typeRef="boolean">
+          <text>FSK</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1sr032v" label="Jugendschutz-Status" name="FSK-Status" typeRef="boolean" />
+      <rule id="DecisionRule_0bploor">
+        <inputEntry id="UnaryTests_0qrwfdk">
+          <text>&gt;=16</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q3issq">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0r4namh">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1b7kd8d">
+        <inputEntry id="UnaryTests_1bp76zv">
+          <text>&lt;16</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p16pgy">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jm6e1d">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_154xewf">
+        <dc:Bounds height="80" width="180" x="200" y="250" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_112sr25" dmnElementRef="InputData_1c176q0">
+        <dc:Bounds height="45" width="125" x="157" y="407" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1pzuaf6" dmnElementRef="InformationRequirement_0pd1wgw">
+        <di:waypoint x="220" y="407" />
+        <di:waypoint x="260" y="350" />
+        <di:waypoint x="260" y="330" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0z5upld" dmnElementRef="InputData_07n9b59">
+        <dc:Bounds height="45" width="125" x="328" y="408" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_170xu95" dmnElementRef="InformationRequirement_0a2y6ky">
+        <di:waypoint x="391" y="408" />
+        <di:waypoint x="320" y="350" />
+        <di:waypoint x="320" y="330" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_0050qg2" dmnElementRef="InformationRequirement_010ugil">
+        <di:waypoint x="290" y="250" />
+        <di:waypoint x="361" y="180" />
+        <di:waypoint x="361" y="160" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_06z2lue" dmnElementRef="InputData_0wj4xor">
+        <dc:Bounds height="45" width="125" x="498" y="268" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0iazxtq" dmnElementRef="InformationRequirement_11qrwc2">
+        <di:waypoint x="561" y="268" />
+        <di:waypoint x="421" y="180" />
+        <di:waypoint x="421" y="160" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1vgx1lf" dmnElementRef="Decision_1c55925">
+        <dc:Bounds height="80" width="180" x="301" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
